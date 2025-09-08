@@ -1,0 +1,6 @@
+{%- set attr_s = handle_links(mark.attrs) -%}
+{%- if attr_s -%}
+<span class="bible-reference" {{ attr_s }}>{{ text }}</span>
+{%- else -%}
+<span>{{ text }}</span>
+{%- endif -%}
