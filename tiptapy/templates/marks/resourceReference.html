@@ -1,1 +1,6 @@
-<span class="resource-reference" data-resource-id="{{ attrs.resourceId }}" data-resource-type="{{ attrs.resourceType }}">{{ text }}</span>
+{%- set attr_s = handle_links(mark.attrs) -%}
+{%- if attr_s -%}
+<span {{ attr_s }}>{{ text }}</span>
+{%- else -%}
+<span>{{ text }}</span>
+{%- endif -%}
