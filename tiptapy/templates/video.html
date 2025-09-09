@@ -9,7 +9,7 @@
   {%- set fallback_type = url2mime(fallback_url) -%}
 
   {%- if image_url or fallback_url -%}
-    <figure{{ extract_tag_attrs(node) }}><video><source srcset="{{ image_url }}" type="{{ image_type }}"/><source srcset="{{ fallback_url }}" type="{{ fallback_type }}"/><{{ make_img_src(node.attrs) }}/></video>
+    <figure{{ extract_tag_attrs(node) }}><video><source srcset="{{ image_url }}" type="video"/></video>
       {%- if caption -%}
         <figcaption>{{ caption }}</figcaption>
       {%- endif -%}
