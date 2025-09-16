@@ -1,8 +1,4 @@
-{%- if node.attrs.start -%}
-<ul start="{{ node.attrs.start }}"{{ extract_tag_attrs(node) }}>
-{%- else -%}
-<ul start="{{ node.attrs.order|default(1) }}"{{ extract_tag_attrs(node) }}>
-{%- endif -%}
+<ul{{ extract_tag_attrs(node) }}>
 {%- for item in node.content -%}
   {%- with template=item.type + '.html', node=item -%} 
       {%- include template -%}
