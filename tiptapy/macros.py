@@ -40,7 +40,7 @@ def build_link_handler(config):
     def handle_links(attrs):
         retval = None
         if attrs:
-            url = attrs.get("href", "").strip()
+            url = str(attrs.get("href", "")).strip()
             link = urlparse(url)
             if not (
                 link.netloc == config.DOMAIN
